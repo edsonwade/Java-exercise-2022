@@ -7,18 +7,22 @@ import java.util.List;
 public class Main {
     static int numberWithMoreOccurency = 0;
     static int maxCount = 0;
+    static int numb = 0;
     static int sum = 0;
 
     public static void main(String[] args) {
-        int[] number = new int[]{1, 2, 3, 3, 4, 3, 4, 2, 2, 2, 7, 7};
+       /* Exercise 1  */
         int[] sumNumer = new int[]{2, 3, 4, 6, 5, 7, 9, 8};
         List<Integer> integers = Arrays.asList(2, 3, 5, 6, 7, 8, 10, 11, 10);
+        System.out.println("total sum : " + returnTheSumOfParNumber(sumNumer));
+        System.out.println("total sum using list :" + returnTheSumOfParNumber(integers));
 
+        /* Exercise 2 */
+        int[] number = new int[]{1, 2, 3, 3, 4, 3, 4, 2, 2, 2, 7, 7};
+         System.out.println(returnTheNumberTheOccurMoreTimeInArray(number));
 
-         System.out.println("total sum : " + returnTheSumOfParNumber(sumNumer));
-         System.out.println("total sum using list :" + returnTheSumOfParNumber(integers));
-
-        // System.out.println(returnTheNumberTheOccurMoreTimeInArray(number));
+        /* Exercixe 3 */
+        System.out.println("fibonacci :" + returnTheSumOfAllNumbersFibonacciSequenceRecursive(numb));
     }
 
     /**
@@ -36,8 +40,8 @@ public class Main {
     }
 
     /**
-     *  exercise 1.1 ->  faz um metodo que recebe uma lista de
-     *    * inteiros e retorna a soma dos numeros pares
+     * exercise 1.1 ->  faz um metodo que recebe uma lista de
+     * * inteiros e retorna a soma dos numeros pares
      */
 
     public static int returnTheSumOfParNumber(List<Integer> number) {
@@ -63,9 +67,16 @@ public class Main {
         }
         return numberWithMoreOccurency;
     }
+
+    /**
+     * exercise 3 ->faz um metodo que recebe um inteiro n e
+     * retorna a soma de todos os numeros da sequencia
+     * de fibonacci ate o numero n (resolver ambas maneiras recursiva e nao recursiva)
+     */
+    private static int returnTheSumOfAllNumbersFibonacciSequenceRecursive(int numb) {
+        return (numb <= 1) ? numb
+                : returnTheSumOfAllNumbersFibonacciSequenceRecursive(numb - 1)
+                + returnTheSumOfAllNumbersFibonacciSequenceRecursive(numb - 2);
+    }
+
 }
-/*
- *
- *
- *
- * */
