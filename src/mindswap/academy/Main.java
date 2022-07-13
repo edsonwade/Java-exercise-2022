@@ -8,7 +8,7 @@ public class Main {
     static int numberWithMoreOccurency = 0;
     static int maxCount = 0;
     static int numb = 8;
-    static int sum = 0;
+    static  int sum = 0;
 
     public static void main(String[] args) {
         /* Exercise 1  */
